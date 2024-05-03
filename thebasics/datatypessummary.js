@@ -17,7 +17,7 @@ let tag=Symbol('123')
 let bab=Symbol('123')
 //console.log(tag)
 // console.log(bab)
-// console.log(tag===bab) // not equal in values, equal in datatype onyl i.e symbol.
+//console.log(tag===bab) // not equal in values, equal in datatype onyl i.e symbol.
 
 
 

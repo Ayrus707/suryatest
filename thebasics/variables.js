@@ -14,3 +14,22 @@ myplace="India"
 console.table([myid,myname,myemail,myplace,accountstate])
 
 //note: const and let are blocked scoped i.e they can be only accessed withing the {}, whereas var is functional scoped->refer to gfg.
+
+//3 types of scopes in javscript: 1. Bracket scope(can be accesses within a bracket only) , 2.Functional Scope(can be accessed within a function), 3.Global scope
+
+function myfoo(){
+    var str=1                 // inside brackets, let keyword cannot accept redeclaration of the same variable,it will give error.
+    var str=2                //but var does allow this.
+    console.log(str)
+}
+myfoo()
+function surya(){
+    let a=2
+    if(a>2){
+        let b=3
+        var c=4
+    }
+    console.log(c)
+    console.log(b)
+}
+surya()
