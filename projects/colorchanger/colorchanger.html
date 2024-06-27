@@ -16,17 +16,34 @@
 </div>
 
 <div class="addcolor">
-    <input type="text" class="hlo">Enter A color of your choice
-    <button class="hlo">Add Color</button>
+    <input type="text" class="hlo" id="texts">Enter A color of your choice
+    <button class="hlo" id="btnn">Add Color</button>
+    <button class="hlo" id="btnn2">Remove Color</button>
 </div>
 
 
 <script>
-
+//This function fetched the input from input field and stores it in variable 'val', then it checked if the 
+// entered colou is valid or not. If color is valid then it calls the function addyourcolor().
 function inputtext(){
-    
+    const input=document.querySelector("#texts")
+    const btn=document.querySelector("#btnn")
+   btn.addEventListener('click',function(e){
+   const val=input.value;
+   input.value=" "
+   let flag=isValidColor(val);
+   if(flag==true) addyourcolor(val);
+   else alert("Please Enter a Valid Color!")
+   })
 }
+inputtext()
 
+// function for checking valid color or not.
+function isValidColor(color){
+let flag=CSS.supports('color',color)
+return flag
+}
+//function for adding the inputted color.
     function addyourcolor(color){
     const mydiv=document.querySelector(".canvas")
     const myspan=document.createElement('span')
@@ -39,9 +56,9 @@ function inputtext(){
         document.body.style.backgroundColor=`${e.target.id}`
     })
 }
-addyourcolor("purple")
 
 
+// rest of the default code.
 const button=document.querySelectorAll(".buttons")
 const body=document.body;
 
@@ -61,7 +78,15 @@ button.forEach(function(btn){
     })
 })
 
-
+function removecolor(){
+    const button=document.querySelector("#btnn2");
+    button.addEventListener('click',function(e){
+    const span1=document.querySelector('span:last-child')
+    span1.remove()
+    document.body.style.backgroundColor="white"
+    })
+}
+removecolor()
 
 
 
