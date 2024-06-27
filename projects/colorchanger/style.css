@@ -1,0 +1,40 @@
+.html{
+    margin:0;
+}
+span{
+    display:block;
+}
+.buttons{
+    width: 150px;
+  height: 100px;
+  border: solid black 2px;
+  display: inline-block;
+}
+#grey{
+    background-color: grey;
+}
+#red{
+    background-color: red;
+}
+#yellow{
+    background-color: yellow;
+}
+#blue{
+    background-color: blue;
+}
+.canvas {
+    margin: 100px auto 100px;
+    width: 80%;
+    text-align: center;
+  }
+  .addcolor{
+    margin:100px auto 100px;
+    width:90%;
+    text-align: center;
+   
+    
+  }
+  .hlo{
+    display: inline-block;
+
+  }

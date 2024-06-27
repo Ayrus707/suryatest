@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="canvas">
+    <h1>This is color changer project</h1>
+    <span class="buttons"id="grey"></span>
+    <span class="buttons" id="yellow"></span>
+    <span class="buttons" id="blue"></span>
+    <span class="buttons" id="red"></span>
+</div>
+
+<div class="addcolor">
+    <input type="text" class="hlo">Enter A color of your choice
+    <button class="hlo">Add Color</button>
+</div>
+
+
+<script>
+
+function inputtext(){
+    
+}
+
+    function addyourcolor(color){
+    const mydiv=document.querySelector(".canvas")
+    const myspan=document.createElement('span')
+    myspan.className="buttons"
+    myspan.id=`${color}`
+    myspan.style.backgroundColor=`${color}`
+    mydiv.appendChild(myspan)
+  //  console.log(myspan);
+    myspan.addEventListener('click',function(e){
+        document.body.style.backgroundColor=`${e.target.id}`
+    })
+}
+addyourcolor("purple")
+
+
+const button=document.querySelectorAll(".buttons")
+const body=document.body;
+
+button.forEach(function(btn){
+    btn.addEventListener('click',function(e){
+       const id=e.target.id;
+       switch(id){
+        case "grey": body.style.backgroundColor="grey"
+        break;
+        case "yellow": body.style.backgroundColor="yellow"
+        break;
+        case "blue": body.style.backgroundColor="blue"
+        break;
+        case "red": body.style.backgroundColor="red"
+        break;
+       }
+    })
+})
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
