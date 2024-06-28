@@ -8,13 +8,19 @@
 </head>
 <body style="background-color: lightslategray;">
     <div class="main-content">
+        <div class="formcontent">
         <h2>Calculate Your BMI</h2>
-        <form> 
-            <label for="">Enter your Height: </label><input type="number"  id="Height">
-            <label for="">Enter your Weight: </label><input type="number"  id="Weight">
+        <form id="myform"> 
+            <label for="">Enter your Height(in cm): </label><input type="text"  id="Height"><br>
+            <label for="">Enter your Weight(in Kg): </label><input type="text"  id="Weight">
         </form>
-
+        <button class="btn">Get BMI</button>
+        <button class="btn2">Reset</button>
     </div>
+   
+    <div class="result"></div>
+    </div>
+    <script src="script.js"></script>
     
 </body>
 </html>

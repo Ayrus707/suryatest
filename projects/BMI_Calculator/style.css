@@ -1,4 +1,39 @@
 .main-content{
-    width: 200px;
-    height:200px;
+    width: 500px;
+    height:300px;
+    padding-left:8%;
+    padding-top:5%;
+    background-color: white;
+    margin-left:30%;
+    margin-top:5%;
+}
+.formcontent{
+ font-size: 20px;
+    width: 80%;
+    height:50%;
+    border: 3px solid #3f0e77;
+    
+}
+#height,
+#weight {
+  width: 150px;
+  height: 25px;
+  margin-top: 30px;
+}
+.btn{
+    margin-top: 40px;
+    margin-left:8%;
+    padding:10px 30px;
+    border-radius:20px;
+}
+.btn2{
+    margin-left:15%;
+    margin-top:40px;
+    padding:10px 30px;
+    border-radius:20px;
+}
+.result{
+    margin-top:100px;
+    font-size:20px;
+    margin-left: 20%;
 }
