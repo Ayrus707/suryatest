@@ -27,6 +27,13 @@ function get_input(){
     else{
         let val=(weight/((height*height)/10000)).toFixed(2)
        result.textContent=`Your Body Index Mass is: ${val}`
+       display_image(val)
     }
-   
+  
+}
+function display_image(val){
+    if(val<18.5){
+        const img=document.querySelector(".one");
+       img.style.display="block";
+    }
 }
